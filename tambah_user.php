@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +14,14 @@
         <input type="text" name="nama" value="" class="form-control">
         Username : 
         <input type="text" name="username" value="" class="form-control">
+        alamat : 
+        <input type="alamat" name="alamat" value="" class="form-control">
         Password : 
         <input type="password" name="password" value="" class="form-control">
+        kota : 
+        <input type="kota" name="kota" value="" class="form-control">
+        provinsi : 
+        <input type="provinsi" name="provinsi" value="" class="form-control">
         Role :
         <select name="role" class="form-control">
             <option></option>

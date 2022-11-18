@@ -1,3 +1,9 @@
+<?php 
+    include "header.php";
+?>
+<?php
+    if($_SESSION['role'] == 'admin'){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,14 +30,20 @@ $qry_paket=mysqli_query($conn,"select * from paket");
                 <td><?=$no?></td>
                 <td><?=$data_paket['nama_paket']?></td>
                 <td><?=$data_paket['harga']?></td>
-                <td><a href="ubah_paket.php?id_paket=<?=$data_paket['id_paket']?>" class="btn btn-success">Ubah</a> | <a href="hapus.php?id_siswa=<?=$data_paket['id_paket']?>" 
+                <td><a href="ubah_paket.php?id_paket=<?=$data_paket['id_paket']?>" class="btn btn-success">Ubah</a> | <a href="hapus_paket.php?id_paket=<?=$data_paket['id_paket']?>" 
                 onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
             </tr>
             <?php 
             }
+            
+        }
             ?>
-        </body>
+          </body>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+    </table>
+    <a href="tambah_paket.php" class="btn btn-primary">Tambah Paket</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>

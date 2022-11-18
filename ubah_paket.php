@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,7 @@
 <body>
     <?php 
     include "koneksi.php";
-    $qry_get_user=mysqli_query($conn,"select * from paket where id_paket = '".$_GET['id_paket']."'");
+    $qry_get_paket=mysqli_query($conn,"select * from paket where id_paket = '".$_GET['id_paket']."'");
 
 //cara menampilkan webnya, dengan cara membuka tampil siswa, klik button ubah
 //baru bisa masuk kedalam web ubah siswa

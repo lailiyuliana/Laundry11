@@ -8,7 +8,7 @@ if($_POST){
         echo "<script>alert('harga tidak boleh kosong');location.href='tambah_paket.php';</script>";
     } else {
         include "koneksi.php";
-        $insert=mysqli_query($conn,"insert into user (nama, harga) value ('".$nama."','".$harga."')") or die(mysqli_error($conn));
+        $insert=mysqli_query($conn,"insert into paket (nama_paket, harga) value ('".$nama_paket."','".$harga."')") or die(mysqli_error($conn));
         if($insert){
             echo "<script>alert('Sukses menambahkan Paket');location.href='tambah_paket.php';</script>";
         } else {

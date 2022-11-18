@@ -1,3 +1,6 @@
+<?php 
+    include "header.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +28,19 @@
         <input type="text" name="nama" value=   "<?=$dt_user['nama']?>" class="form-control">
        Username : 
         <input type="text" name="username" value="<?=$dt_user['username']?>" class="form-control">
+        alamat: 
+        <input type="text" name="alamat" value="<?=$dt_user['alamat']?>" class="form-control">
         Password : 
         <input type="password" name="password" value="" class="form-control">
-
-        
+        kota: 
+        <input type="text" name="kota" value="<?=$dt_user['kota']?>" class="form-control">
+        provinsi: 
+        <input type="text" name="provinsi" value="<?=$dt_user['provinsi']?>" class="form-control">
+        Role :
+        <select name="role" class="form-control">
+            <option></option>
+            <option value="admin">admin</option>
+            <option value="kasir">kasir</option>
         <input type="submit" name="simpan" value="Ubah User" class="btn btn-primary">
        </form>
 

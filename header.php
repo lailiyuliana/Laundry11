@@ -24,23 +24,36 @@ session_start();
     <ul class="nav navbar-nav">
       <li class="active"><a href="home.php">Home</a></li>
         </ul>
+
         <ul class="nav navbar-nav">
-      <li class="active"><a href="cucian.php">Transaksi</a></li>
+      <li class="active"><a href="histori_transaksi.php">Transaksi</a></li>
         </ul>
+
         <ul class="nav navbar-nav">
       <li class="active"><a href="tampil_paket.php">Paket Laundry</a></li>
         </ul>
-<      <ul class="nav navbar-nav">
+
+        <?php
+        if($_SESSION['role'] == 'admin'){
+              ?>
+<     <ul class="nav navbar-nav">
       <li class="active"><a href="tampil_user.php">Data User</a></li>
-        </ul>
+      </ul>
+      <?php
+            }
+            ?>
+
         <ul class="nav navbar-nav">
-      <li class="active"><a href="tampil_member.php">Registrasi Member</a></li>
+      <li class="active"><a href="tampil_member.php">Data Member</a></li>
         </ul>
+        
     <ul class="nav navbar-nav navbar-right">
        <li class="nav-item">
               <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
             </li>
     </ul>
+    </ul>
+                <h6 style="padding-left: 5px;"><?=$_SESSION['nama']?></h6>
   </div>
 </nav>
 </body>

@@ -36,17 +36,18 @@
                 ?>
                 <tr>              
                     <td><?=$no?></td>
-                    <td><?=$data_member['id']?></td>
+                    <td><?=$data_member['id_member']?></td>
                     <td><?=$data_member['nama']?></td> 
                     <td><?=$data_member['alamat']?></td>
-                    <td><?=$data_member['jenis_kelamin']?></td> 
-                    <td><?=$data_member['tlp']?></td> 
-                    <td><a href="ubah_member.php?id=<?=$data_member['id']?>" class="btn btn-success">Ubah</a><a style="margin-left:10px;" href="hapus_member.php?id=<?=$data_member['id']?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td> 
+                    <td><?=$data_member['jk']?></td> 
+                    <td><?=$data_member['telp']?></td> 
+                    <td><a href="ubah_member.php?id_member=<?=$data_member['id_member']?>" class="btn btn-success">Ubah</a> | <a href="hapus_member.php?id_member=<?=$data_member['id_member']?>" 
+                     onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
                 </tr>
                 <?php 
             }
             ?>
-        </tbody>
+        </body>
     </table>
     <a href="tambah_member.php" class="btn btn-primary">Tambah Member</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
